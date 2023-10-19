@@ -7,7 +7,7 @@ export const ListAllUsersRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost/users/listallusers", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/listallusers`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export const LoginRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost/users/login", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -66,7 +66,7 @@ export const RegisterRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost:80/users/register", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -96,7 +96,7 @@ export const DeleteUserRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost:80/users/deleteuser", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/deleteuser`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -124,7 +124,7 @@ export const UpdatePasswordRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost:80/users/updatepassword", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/updatepassword`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -146,7 +146,7 @@ export const UpdatePasswordRoute = async (
 
 export const AuthCheck = async (jwt_token, setUser) => {
   try {
-    const res = await fetch("http://localhost/users/loginwithtoken", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/loginwithtoken`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -170,7 +170,7 @@ export const UpdateEmailRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost:80/users/updateemail", {
+    const res = await fetch(`${process.env.REACT_APP_API}/users/updateemail`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -199,7 +199,7 @@ export const AddOrderRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost:80/orders/addorder", {
+    const res = await fetch(`${process.env.REACT_APP_API}/orders/addorder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -229,7 +229,7 @@ export const ShowOrdersRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost/orders/showorders", {
+    const res = await fetch(`${process.env.REACT_APP_API}/orders/showorders`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -255,7 +255,7 @@ export const CancelOrderRoute = async (
   setShowModal
 ) => {
   try {
-    const res = await fetch("http://localhost:80/orders/cancelorder", {
+    const res = await fetch(`${process.env.REACT_APP_API}/orders/cancelorder`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
